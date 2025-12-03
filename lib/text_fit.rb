@@ -14,6 +14,7 @@ module TextFit
 
   # Configure Zeitwerk autoloader
   loader = Zeitwerk::Loader.for_gem
+  loader.inflector.inflect("cli" => "CLI")
   loader.setup
 
   # Convenience method for quick calculations
