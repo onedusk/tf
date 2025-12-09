@@ -12,17 +12,17 @@
           <chapter id="shared-gems-text-fit-portable-summary" path="shared/gems/text_fit/PORTABLE_SUMMARY.md" modified="2025-12-03T15:25:15Z" size="9273" words="1199" readTime="4min" hash="sha256:7d3d870e03c8fe01">
             <title>TextFit Gem - Portable Implementation Summary</title>
             <summary>TextFit Gem - Portable Implementation Summary ## Overview Successfully converted `/Users/macadelic/dusk-indust/scripts/texts/annotated.rb` into a fully portable, reusable Ruby gem called **TextFit...</summary>
-            <keywords>mathematical, output, features, batch, options, notation, object, standalone, guide, files</keywords>
+            <keywords>complete, created, yaml, installed, tests, projects, executable, adding, usage, installation</keywords>
           </chapter>
           <chapter id="shared-gems-text-fit-quickstart" path="shared/gems/text_fit/QUICKSTART.md" modified="2025-12-03T15:24:13Z" size="4364" words="635" readTime="2min" hash="sha256:3b89740404fd2f4c">
             <title>TextFit Quick Start Guide</title>
             <summary>TextFit Quick Start Guide ## Installation Across Projects ### Option 1: Install from Local Path (Development) Add to your project&apos;s `Gemfile`: ```ruby gem &apos;text_fit&apos;, path: &apos;/path/to/text_fit&apos; `...</summary>
-            <keywords>ruby, **issue**, same, translation, processing, text, quick, option, check, install</keywords>
+            <keywords>ruby, translation, option, more, processing, quick, install, same, **issue**, results</keywords>
           </chapter>
           <chapter id="shared-gems-text-fit-readme" path="shared/gems/text_fit/README.md" modified="2025-12-03T15:21:32Z" size="6079" words="836" readTime="3min" hash="sha256:112a201e987f6eab">
             <title>TextFit</title>
             <summary>TextFit Calculate optimal font sizes for fitting text into bounding boxes. Perfect for UI layouts, PDF generation, image text rendering, and translation workflows. ## Algorithm TextFit implements...</summary>
-            <keywords>bounding, processing, textfit, text, file, font, mathematical, batch, ruby, **capacity</keywords>
+            <keywords>batch, file, custom, text, examples, bounding, basic, configuration, create, ruby</keywords>
           </chapter>
         </section>
       </section>
