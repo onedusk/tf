@@ -116,12 +116,12 @@ module TextFit
     def calculate_batch(items)
       items.map do |item|
         calculate(
-          item[:x1] || item["x1"],
-          item[:y1] || item["y1"],
-          item[:x2] || item["x2"],
-          item[:y2] || item["y2"],
-          item[:t_orig] || item["t_orig"] || item[:orig] || item["orig"],
-          item[:t_trans] || item["t_trans"] || item[:trans] || item["trans"]
+          item[:x1] || item['x1'],
+          item[:y1] || item['y1'],
+          item[:x2] || item['x2'],
+          item[:y2] || item['y2'],
+          item[:t_orig] || item['t_orig'] || item[:orig] || item['orig'],
+          item[:t_trans] || item['t_trans'] || item[:trans] || item['trans']
         )
       end
     end
@@ -129,9 +129,9 @@ module TextFit
     private
 
     def validate_inputs!(x1, y1, x2, y2, t_orig, t_trans)
-      raise ArgumentError, "Coordinates must be numeric" unless [x1, y1, x2, y2].all? { |c| c.is_a?(Numeric) }
-      raise ArgumentError, "Texts must be strings" unless t_orig.is_a?(String) && t_trans.is_a?(String)
-      raise ArgumentError, "Bounding box must have positive area" if (x2 - x1).abs.zero? || (y2 - y1).abs.zero?
+      raise ArgumentError, 'Coordinates must be numeric' unless [x1, y1, x2, y2].all? { |c| c.is_a?(Numeric) }
+      raise ArgumentError, 'Texts must be strings' unless t_orig.is_a?(String) && t_trans.is_a?(String)
+      raise ArgumentError, 'Bounding box must have positive area' if (x2 - x1).abs.zero? || (y2 - y1).abs.zero?
     end
   end
 end

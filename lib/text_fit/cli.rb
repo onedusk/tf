@@ -3,12 +3,12 @@
 module TextFit
   # Command-line interface for TextFit
   class CLI < Thor
-    class_option :delta, type: :numeric, desc: "Font size reduction step (default: 0.5)"
-    class_option :min_size_factor, type: :numeric, desc: "Minimum size factor (default: 0.3)"
-    class_option :output_format, type: :string, enum: %w[text json yaml], default: "text",
-                                 desc: "Output format"
+    class_option :delta, type: :numeric, desc: 'Font size reduction step (default: 0.5)'
+    class_option :min_size_factor, type: :numeric, desc: 'Minimum size factor (default: 0.3)'
+    class_option :output_format, type: :string, enum: %w[text json yaml], default: 'text',
+                                 desc: 'Output format'
 
-    desc "calculate X1 Y1 X2 Y2 ORIG TRANS", "Calculate font size for text fitting"
+    desc 'calculate X1 Y1 X2 Y2 ORIG TRANS', 'Calculate font size for text fitting'
     long_desc <<~DESC
       Calculate the optimal font size for fitting translated text into a bounding box.
 
@@ -32,7 +32,7 @@ module TextFit
       error("Error: #{e.message}")
     end
 
-    desc "batch FILE", "Process multiple translations from JSON file"
+    desc 'batch FILE', 'Process multiple translations from JSON file'
     long_desc <<~DESC
       Process multiple text fitting calculations from a JSON file.
 
@@ -62,9 +62,9 @@ module TextFit
       results = calculator.calculate_batch(data)
 
       case options[:output_format]
-      when "json"
+      when 'json'
         puts JSON.pretty_generate(results.map(&:to_h))
-      when "yaml"
+      when 'yaml'
         puts YAML.dump(results.map(&:to_h))
       else
         results.each_with_index do |result, idx|
@@ -77,7 +77,7 @@ module TextFit
       error("Error processing batch: #{e.message}")
     end
 
-    desc "version", "Show version"
+    desc 'version', 'Show version'
     def version
       puts "TextFit version #{TextFit::VERSION}"
     end
@@ -98,12 +98,12 @@ module TextFit
 
     def output_result(result)
       case options[:output_format]
-      when "json"
+      when 'json'
         puts result.to_json
-      when "yaml"
+      when 'yaml'
         puts result.to_yaml
       else
-        puts result.to_s
+        puts result
       end
     end
 

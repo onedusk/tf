@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 # Standard library dependencies
-require "json"
-require "yaml"
+require 'json'
+require 'yaml'
 
 # Gem dependencies
-require "thor"
-require "zeitwerk"
+require 'thor'
+require 'zeitwerk'
 
 # Module for font size calculation and text fitting
 module TextFit
@@ -14,7 +14,7 @@ module TextFit
 
   # Configure Zeitwerk autoloader
   loader = Zeitwerk::Loader.for_gem
-  loader.inflector.inflect("cli" => "CLI")
+  loader.inflector.inflect('cli' => 'CLI')
   loader.setup
 
   # Convenience method for quick calculations

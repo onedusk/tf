@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "bundler/setup"
-require "text_fit"
+require 'bundler/setup'
+require 'text_fit'
 
-puts "=== Batch Processing Example ==="
+puts '=== Batch Processing Example ==='
 
 # Define multiple translations
 translations = [
-  { x1: 0, y1: 0, x2: 100, y2: 50, orig: "Hello", trans: "Bonjour" },
-  { x1: 0, y1: 0, x2: 150, y2: 75, orig: "World", trans: "Monde" },
-  { x1: 0, y1: 0, x2: 200, y2: 100, orig: "Good morning", trans: "Bonjour" },
-  { x1: 0, y1: 0, x2: 80, y2: 40, orig: "Hi", trans: "Salut" },
-  { x1: 0, y1: 0, x2: 120, y2: 60, orig: "Goodbye", trans: "Au revoir" }
+  { x1: 0, y1: 0, x2: 100, y2: 50, orig: 'Hello', trans: 'Bonjour' },
+  { x1: 0, y1: 0, x2: 150, y2: 75, orig: 'World', trans: 'Monde' },
+  { x1: 0, y1: 0, x2: 200, y2: 100, orig: 'Good morning', trans: 'Bonjour' },
+  { x1: 0, y1: 0, x2: 80, y2: 40, orig: 'Hi', trans: 'Salut' },
+  { x1: 0, y1: 0, x2: 120, y2: 60, orig: 'Goodbye', trans: 'Au revoir' }
 ]
 
 # Process all at once
@@ -21,7 +21,7 @@ results = calculator.calculate_batch(translations)
 
 # Display results
 puts "\nResults:"
-puts "-" * 80
+puts '-' * 80
 
 results.each_with_index do |result, idx|
   translation = translations[idx]
@@ -31,7 +31,7 @@ results.each_with_index do |result, idx|
   puts "    Status: #{result.fitted ? '✓ Fitted' : '✗ Did not fit'}"
 end
 
-puts "\n" + "-" * 80
+puts "\n#{'-' * 80}"
 
 # Summary statistics
 total_iterations = results.sum(&:iterations)

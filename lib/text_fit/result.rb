@@ -45,7 +45,7 @@ module TextFit
     # Human-readable string representation
     # @return [String]
     def to_s
-      status = fitted ? "fitted" : "did not fit (reached minimum)"
+      status = fitted ? 'fitted' : 'did not fit (reached minimum)'
       "Font size: #{font_size.round(2)} (#{status} after #{iterations} iterations)"
     end
   end

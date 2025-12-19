@@ -1,15 +1,18 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "bundler/setup"
-require "text_fit"
+require 'bundler/setup'
+require 'text_fit'
 
-puts "=== Custom Configuration Example ==="
+puts '=== Custom Configuration Example ==='
 
 # Test case: fitting longer text into a box
-x1, y1, x2, y2 = 0, 0, 100, 50
-original_text = "Hi"
-translated_text = "Hello world, this is a much longer translation"
+x1 = 0
+y1 = 0
+x2 = 100
+y2 = 50
+original_text = 'Hi'
+translated_text = 'Hello world, this is a much longer translation'
 
 # Default configuration
 puts "\n1. Default Configuration (delta: 0.5, min_size_factor: 0.3)"
@@ -48,6 +51,6 @@ puts "   Font size: #{result.font_size.round(2)}"
 puts "   Iterations: #{result.iterations}"
 puts "   Fitted: #{result.fitted}"
 
-puts "\n" + "=" * 60
-puts "Note: Smaller delta = more precise but more iterations"
-puts "      Larger min_size_factor = prevents text from getting too small"
+puts "\n#{'=' * 60}"
+puts 'Note: Smaller delta = more precise but more iterations'
+puts '      Larger min_size_factor = prevents text from getting too small'
